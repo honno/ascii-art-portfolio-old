@@ -50,7 +50,10 @@ pre {
     line-height: $pre-line-height;
 }
 
-a.license { text-decoration: none !important }
+a.license {
+    text-decoration: none !important;
+    padding: 0.125rem;
+}
 
 #credits {
     list-style: none;
