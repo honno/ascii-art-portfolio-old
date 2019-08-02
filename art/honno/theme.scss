@@ -1,0 +1,19 @@
+@import "theme-mixins";
+@import "colours/gj";
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+@include color-theme(
+    $emphasis: $lightest,
+    $primary: $lighter,
+    $secondary: $light,
+    $background: $darker,
+    $background-highlight: $dark,
+    $heart: $green
+);
+
+pre {
+    font-family: 'Inconsolata', monospace !important;
+    font-size: 1.125rem;
+    color: $light;
+}
