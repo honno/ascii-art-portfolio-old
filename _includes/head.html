@@ -33,9 +33,9 @@
   {% endif %}
   {% if page.image %}
   <meta name="twitter:card"  content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}images/posts{{ page.image }}">
+  <meta name="twitter:image" content="{{ page.image | prepend: page.url }}">
   {% else %}
   <meta name="twitter:card"  content="summary">
-  <meta name="twitter:image" content="{{ site.url }}images/me.jpg">
+  <meta name="twitter:image" content="{{ images/me.jpg | prepend: site.url }}">
   {% endif %}
 </head>
