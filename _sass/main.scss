@@ -99,7 +99,10 @@ a.license {
         right: 0;
     }
 
-    h1 { display: inline }
+    h1 {
+        display: inline;
+        margin-right: $font-size * 0.5;
+    }
 
     #credits {
         margin: 0;
