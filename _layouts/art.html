@@ -24,7 +24,7 @@
       </figure>
 
       <figcaption>
-        Art licensed under <a href="{{ page.license | prepend: 'licenses/' }}" class="license">{{ page.license }}</a>
+        Art licensed under <a href="{{ page.license | prepend: '/licenses/' | prepend: site.url | append: '.txt' }}" class="license">{{ page.license }}</a>
       </figcaption>
 
       {% include footer.html %}
