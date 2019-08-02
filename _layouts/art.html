@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <style>
+  </style>
+
+  <body>
+    <div id="container">
+
+      {% include header.html %}
+
+      {% include github.html %}
+
+      <figure>
+        {{ content }}
+      </figure>
+
+      <figcaption>
+        Art licensed under <a href="{{ page.license | prepend: 'licenses/' }}">{{ page.license }}</a>
+      </figcaption>
+
+      {% include footer.html %}
+
+    </div>
+  </body>
+</html>

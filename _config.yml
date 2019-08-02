@@ -1,0 +1,18 @@
+# Site settings
+title: Honno's ASCII Art Showcase
+email: quitesimplymatt@gmail.com
+description: >-
+  ASCII art made by Matthew Barber.
+baseurl: "/"
+url: "https://ascii.matthewbarber.io/"
+master_url: "https://matthewbarber.io/"
+github_url: "https://github.com/Honno/ascii-art/"
+twitter_username: WhoStoleHonno
+github_username: Honno
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+sass:
+  sass_dir: _sass

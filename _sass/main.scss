@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab&display=swap');
+
+/* Variables */
+
+$font-family:  'Roboto', sans-serif;
+$font-size: 12px;
+$font-weight: 400;
+$line-height: 1.125;
+
+$pre-font-family: 'Roboto Mono', monospace;
+$pre-font-size: $font-size;
+$pre-font-weight: $font-weight;
+$pre-line-height: $pre-font-size;
+
+$media-medium: 768px;
+
+/* Resets */
+
+h1 { font-size: $font-size }
+
+/* Styles */
+
+body {
+    padding: $font-size;
+
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+h1 {
+    font-family: 'Roboto Slab', $font-family;
+    font-weight: $font-weight * 1.5 }
+
+#artist {
+    &:before { content: '//' }
+}
+#heart {
+    white-space: pre;
+    @extend pre;
+
+    display: inline-block;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg) scale(1, 1.25);
+}
+
+pre {
+    font-family: $pre-font-family;
+    font-size: $pre-font-size;
+    font-weight: $pre-font-weight;
+    line-height: $pre-line-height;
+}
+
+#credits {
+    list-style: none;
+    padding: 0;
+}
+
+@media only screen and (max-width: $media-medium) {
+    figure { margin: 2rem 0 }
+    figcaption {
+        border-top: 1px solid black;
+        padding-top: ($line-height - 1) * 1rem;
+    }
+    figcaption, footer { font-size: 0.65rem }
+}
+
+@media only screen and (min-width: $media-medium) {
+    body { height: 100vh }
+
+    #container {
+        display: flex;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header, figcaption, footer {
+        position: absolute;
+        margin: 1rem;
+    }
+    header {
+        top: 0;
+        left: 0;
+    }
+    figcaption {
+        bottom: 0;
+        left: 0;
+    }
+    footer {
+        bottom: 0;
+        right: 0;
+    }
+
+    h1 { display: inline }
+
+    #credits {
+        margin: 0;
+        li {
+            display: inline;
+
+            &:before { content: '\00a0\2022\00a0' }
+            &:first-child:before { content: '' }
+
+        }
+    }
+}
