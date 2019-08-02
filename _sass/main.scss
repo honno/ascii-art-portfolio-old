@@ -30,20 +30,17 @@ body {
     line-height: $line-height;
 }
 
+a { text-decoration-style: dotted }
+a.person { font-style: italic }
+
 h1 {
     font-family: 'Roboto Slab', $font-family;
     font-weight: $font-weight * 1.5 }
 
 #artist {
     &:before { content: '//' }
-}
-#heart {
-    white-space: pre;
-    @extend pre;
 
-    display: inline-block;
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg) scale(1, 1.25);
+    a { text-decoration: none !important }
 }
 
 pre {
@@ -52,6 +49,8 @@ pre {
     font-weight: $pre-font-weight;
     line-height: $pre-line-height;
 }
+
+a.license { text-decoration: none !important }
 
 #credits {
     list-style: none;
@@ -64,7 +63,7 @@ pre {
     figure { margin: 2rem 0 }
     figcaption {
         border-top: 1px solid black;
-        padding-top: ($line-height - 1) * 1rem;
+        padding-top: $line-height * 0.5rem;
     }
     figcaption, footer { font-size: 0.65rem }
 }

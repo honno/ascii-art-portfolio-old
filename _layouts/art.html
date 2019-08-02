@@ -3,8 +3,14 @@
 
   {%- include head.html -%}
 
-  <style>
+  {% if page.style %}
+  <style type="text/css">
+    {% capture sass_theme %}
+      {% include_relative {{ page.style }} %}
+    {% endcapture %}
+    {{ sass_theme | scssify }}
   </style>
+  {% endif %}
 
   <body>
     <div id="container">
@@ -18,7 +24,7 @@
       </figure>
 
       <figcaption>
-        Art licensed under <a href="{{ page.license | prepend: 'licenses/' }}">{{ page.license }}</a>
+        Art licensed under <a href="{{ page.license | prepend: 'licenses/' }}" class="license">{{ page.license }}</a>
       </figcaption>
 
       {% include footer.html %}

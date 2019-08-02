@@ -1,0 +1,43 @@
+@import "solarized";
+
+@mixin color-theme(
+    $emphasis: $base01,
+    $primary: $base00,
+    $secondary: $base1,
+    $background: $base3,
+    $background-highlight: $base2,
+    $red: $red
+) {
+    body {
+        color: $primary;
+        background: $background;
+    }
+
+    ::selection { background: $background-highlight }
+
+    h1 { color: $emphasis }
+
+    #artist { color: $secondary }
+
+    a {
+        color: $primary;
+        &:link, &:visited { color: $primary }
+        &:hover, &:active { color: $emphasis }
+    }
+
+    .github-corner > svg {
+        color: $background;
+        fill: $primary;
+    }
+
+    #heart { color: $red}
+
+    a.license {
+        color: $background;
+        background: $emphasis;
+    }
+
+    #credits > li:before { color: $secondary }
+
+}
+
