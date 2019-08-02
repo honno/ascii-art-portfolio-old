@@ -27,7 +27,14 @@
         Art licensed under <a href="{{ page.license | prepend: '/licenses/' | prepend: site.url | append: '.txt' }}" class="license">{{ page.license }}</a>
       </figcaption>
 
-      {% include footer.html %}
+      {% if page.credits %}
+        {% capture credits %}
+          {% include_relative {{ page.credits }} %}
+        {% endcapture %}
+        {% include footer.html credits=credits %}
+      {% else %}
+        {% include footer.html %}
+      {% endif %}
 
     </div>
   </body>
