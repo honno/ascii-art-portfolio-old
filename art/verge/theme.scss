@@ -1,0 +1,23 @@
+@import "theme-mixins";
+@import "colours/gj";
+
+$verge-grey: #d4d4d4;
+$verge-blue: #393092;
+$verge-pink: #ec008c;
+
+@include color-theme(
+    $emphasis: $lightest,
+    $primary: $verge-grey,
+    $secondary: $light,
+    $background: $darkest,
+    $background-highlight: $darker,
+    $heart: $verge-pink
+);
+
+.blue { color: $verge-blue }
+.pink { color: $verge-pink }
+
+pre {
+    color: $verge-grey;
+    line-height: 0.875 !important;
+}

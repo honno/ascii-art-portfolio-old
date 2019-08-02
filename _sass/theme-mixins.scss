@@ -1,4 +1,4 @@
-@import "solarized";
+@import "colours/solarized";
 
 @mixin color-theme(
     $emphasis: $base01,
@@ -6,7 +6,7 @@
     $secondary: $base1,
     $background: $base3,
     $background-highlight: $base2,
-    $red: $red
+    $heart: $red
 ) {
     body {
         color: $primary;
@@ -17,11 +17,11 @@
 
     h1 { color: $emphasis }
 
-    #artist { color: $secondary }
+    #artist, #credits { color: $secondary }
 
     a {
         color: $primary;
-        &:link, &:visited { color: $primary }
+
         &:hover, &:active { color: $emphasis }
     }
 
@@ -30,14 +30,16 @@
         fill: $primary;
     }
 
-    #heart { color: $red}
+    #heart { color: $heart}
 
     a.license {
         color: $background;
-        background: $emphasis;
+        background: $primary;
+
+        &:hover, &:active {
+            color: $emphasis;
+            background: none;
+        }
     }
-
-    #credits > li:before { color: $secondary }
-
 }
 
