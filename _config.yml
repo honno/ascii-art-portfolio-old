@@ -4,7 +4,7 @@ email: quitesimplymatt@gmail.com
 description: >-
   ASCII art made by Matthew Barber.
 baseurl: "/"
-url: "https://ascii.matthewbarber.io/"
+url: "https://ascii.matthewbarber.io"
 master_url: "https://matthewbarber.io/"
 github_url: "https://github.com/Honno/ascii-art/"
 twitter_username: WhoStoleHonno
