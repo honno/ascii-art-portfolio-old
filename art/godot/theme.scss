@@ -1,0 +1,21 @@
+@import "theme-mixins";
+@import "colours/gj";
+
+$godot-blue: #478cbf;
+$godot-black: #414042;
+
+@include color-theme(
+    $emphasis: $dark,
+    $primary: $godot-black,
+    $secondary: $gray,
+    $background: $white,
+    $background-highlight: $lightest,
+    $heart: $godot-blue
+);
+
+.black { color: $godot-black }
+
+pre {
+    line-height: 1.25;
+    color: $godot-blue;
+}
