@@ -1,0 +1,21 @@
+@import "theme-mixins";
+@import "colours/gj";
+
+$python-blue: #3874a5;
+$python-yellow: #FFAA1D; /* original #ffcd3c */
+
+@include color-theme(
+    $emphasis: $darkest,
+    $primary: $dark,
+    $secondary: $gray,
+    $background: $white,
+    $background-highlight: $lightest,
+    $heart: $python-yellow,
+);
+
+.blu { color: $python-blue }
+.yel { color: $python-yellow }
+
+pre {
+    line-height: 1.25;
+}
